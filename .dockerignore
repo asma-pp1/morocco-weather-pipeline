@@ -1,0 +1,6 @@
+venv/
+data/
+.git/
+notebooks/
+sql/.env
+.env
