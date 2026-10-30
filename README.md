@@ -4,7 +4,6 @@ An automated, end-to-end data pipeline. Every day it collects hourly weather dat
 
 **Stack:** Python · Apache Spark (PySpark) · Apache Airflow · MySQL · Docker · Power BI
 
-![Airflow DAG with three green tasks](docs/airflow_graph.png)
 
 ## Contents
 
@@ -135,6 +134,8 @@ extract >> transform >> load
 - Each task retries twice, five minutes apart.
 - A task only starts when the previous one succeeded. If `transform` fails, `load` is marked `upstream_failed` and never runs.
 
+![Airflow DAG with three green tasks](docs/airflow_graph.png)
+
 ### 5. Visualize (Power BI)
 
 Two pages. See [Dashboard](#dashboard).
@@ -221,6 +222,7 @@ To pause Airflow without losing its history, use `docker compose stop`.
 Weather data by [Open-Meteo.com](https://open-meteo.com/), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Free for non-commercial use, no API key required.
 
 Historical data (backfill): https://archive-api.open-meteo.com/v1/archive
+
 Recent data (daily runs): https://api.open-meteo.com/v1/forecast
 
 ## Author
