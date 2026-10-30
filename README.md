@@ -154,11 +154,11 @@ Run inside `transform.py`, before anything is written. Any failure raises an err
 
 **Page 1: Weather overview** answers the three business questions: which cities are getting hotter (7-day average temperature), when it rains most (rainy days per month), and how each year compares (city by year matrix).
 
-![Dashboard page 1: weather overview](docs/dashboard_overview.png)
+![Dashboard page 1: weather overview](docs\01_weather_overview(powerbi).png)
 
 **Page 2: Pipeline health** monitors the pipeline itself: is the data fresh (latest day loaded), is it complete (days where `hours_recorded` is not 24, which should be none), and is it balanced (same number of days in every city).
 
-![Dashboard page 2: pipeline health](docs/dashboard_health.png)
+![Dashboard page 2: pipeline health](docs/02_pipeline_health(powerbi).png)
 
 ## Design decisions
 
